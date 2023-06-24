@@ -1,15 +1,17 @@
 package az.company;
 
 import az.company.model.Menu;
-import az.company.service.impl.ProductImpl;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        ProductImpl productImpl=new ProductImpl();
-//        productImpl.addProduct(new Product("addd","Duyu",ProductCategory.DRY_FOOD,BigDecimal.valueOf(2),10));
-//
+//        PersistenceConfig.entityManager();
+
+
+
+
         Boolean b = true;
         Menu menu = new Menu();
 
@@ -24,13 +26,15 @@ public class Main {
             int operation = scanner.nextInt();
 
             if (operation == 1) {
-                menu.operateOnProductMenu();
+                menu.operateOnProductMenu(args[0]);
             } else if (operation == 2) {
-                menu.operateOnSalesMenu();
+                menu.operateOnSalesMenu(args[0]);
             } else if (operation == 3) {
                 b = false;
                 System.out.println("Sistemden chixildi");
             }
         }
+
+
     }
 }

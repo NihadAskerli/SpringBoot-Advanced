@@ -4,5 +4,4 @@ import az.company.service.inter.SalesItemInter;
 
 public class SalesItemImpl implements SalesItemInter {
 
-
 }

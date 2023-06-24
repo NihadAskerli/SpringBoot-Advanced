@@ -1,5 +1,6 @@
 package az.company.service.inter;
 
+import az.company.model.Product;
 import az.company.model.Sale;
 import az.company.model.SalesItem;
 
@@ -12,12 +13,21 @@ public interface SalesInter {
 
     void addSales(List<SalesItem> salesItems);
 
-    List<Sale> getBeetweenTwoTime(LocalDateTime localDateTime1,LocalDateTime localDateTime2);
+    void updateSales(String salesNumber, Sale sale);
+
+    void deleteSales(String salesNumber);
+
+    List<Sale> getBeetweenTwoTime(LocalDateTime localDateTime1, LocalDateTime localDateTime2);
 
     List<Sale> getInOneDaySales(LocalDate localDate);
 
-    List<Sale> getSalesPrice(BigDecimal salesPrice1,BigDecimal salesPrice2);
+    List<Sale> getSalesPrice(BigDecimal salesPrice1, BigDecimal salesPrice2);
 
-    Sale getSalesByBarcode(String salesNumber);
+    Sale getSalesBySalesNumber(String salesNumber);
 
+    void returnSalesProduct(SalesItem salesItem, String salesNumber);
+
+    void returnAllSales(List<SalesItem> salesItems);
+
+    List<Sale> getAllSales();
 }

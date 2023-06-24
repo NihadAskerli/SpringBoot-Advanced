@@ -1,5 +1,6 @@
 package az.company.model;
 
+
 public enum ProductCategory {
     MEAT_AND_GOURMET,
     DRY_FOOD,
