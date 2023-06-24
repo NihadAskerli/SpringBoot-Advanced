@@ -1,7 +1,4 @@
-package org.entity;
-
-import java.time.DayOfWeek;
-import java.time.LocalDate;
+package org.models;
 
 public enum Category {
     Wearable("w"),Eatable("e"),Drinks("d");

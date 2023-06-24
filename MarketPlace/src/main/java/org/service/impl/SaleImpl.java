@@ -1,8 +1,8 @@
 package org.service.impl;
 
-import org.entity.Item;
-import org.entity.Product;
-import org.entity.Sale;
+import org.models.Item;
+import org.models.Product;
+import org.models.Sale;
 import org.service.inter.SaleInter;
 
 import java.time.LocalDate;

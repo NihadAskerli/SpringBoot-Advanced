@@ -1,7 +1,5 @@
 package org.service.inter;
 
-import org.entity.Item;
-
 public interface ItemInter {
 
 

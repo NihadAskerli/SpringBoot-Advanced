@@ -1,13 +1,12 @@
 package org.service.inter;
 
-import org.entity.Category;
-import org.entity.Product;
+import org.models.Product;
 
 import java.util.List;
 
 public interface ProductInter {
 
-     Product addProduct(Product product);
+     void addProduct(Product product);
      void deleteProduct(Long id);
      void updateProductName(Long id,String name);
      void updateProductPrice(Long id,Double price);
@@ -15,7 +14,7 @@ public interface ProductInter {
      void updateProductCategory(Long id, String category);
      List<Product> showProducts();
      List<Product> showProductsByName(String name);
-     void showProductsByCategory(String category);
+     List<Product> showProductsByCategory(String category);
      List<Product> showProductsByPrice(Double minPrice,Double maxPrice);
 
      Product getProductByBarcode(String barcode);

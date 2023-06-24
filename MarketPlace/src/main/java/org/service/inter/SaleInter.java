@@ -1,7 +1,7 @@
 package org.service.inter;
 
-import org.entity.Item;
-import org.entity.Sale;
+import org.models.Item;
+import org.models.Sale;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

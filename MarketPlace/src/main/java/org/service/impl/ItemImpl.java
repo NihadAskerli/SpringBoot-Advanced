@@ -1,7 +1,6 @@
 package org.service.impl;
 
-import org.entity.Item;
-import org.entity.Product;
+import org.models.Product;
 import org.service.inter.ItemInter;
 
 import java.util.Optional;

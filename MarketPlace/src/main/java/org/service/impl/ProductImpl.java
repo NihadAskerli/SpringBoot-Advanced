@@ -1,7 +1,7 @@
 package org.service.impl;
 
-import org.entity.Category;
-import org.entity.Product;
+import org.models.Category;
+import org.models.Product;
 import org.service.inter.ProductInter;
 
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ public class ProductImpl implements ProductInter {
 
 
     @Override
-    public Product addProduct(Product product) {
+    public void addProduct(Product product) {
         productList.add(product);
-        return product;
+
     }
 
     @Override
@@ -117,8 +117,9 @@ public class ProductImpl implements ProductInter {
     }
 
     @Override
-    public void showProductsByCategory(String category) {
-        productList.stream().filter(product -> product.getCategory().getName().equals(category)).forEach(System.out::println);
+    public List<Product> showProductsByCategory(String category) {
+        List<Product>  productList1= productList.stream().filter(product -> product.getCategory().getName().equals(category)).collect(Collectors.toList());
+       return productList1;
     }
 
     @Override
