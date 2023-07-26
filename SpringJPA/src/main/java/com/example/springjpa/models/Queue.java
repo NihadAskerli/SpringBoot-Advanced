@@ -5,23 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
-@Table(name = "users")
+@Table(name = "queues")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Queue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String city;
-    private String name;
-    private String surname;
-    @ElementCollection(fetch = FetchType.EAGER)
-    private List<Role> roleList;
-
+    private String companyName;
+    private String numberOfEnter;
 }

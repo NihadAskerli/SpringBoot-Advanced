@@ -29,5 +29,8 @@ public class SpringJpaApplication implements CommandLineRunner {
 //        roleList.add(Role.ADMIN);
 //        userService.saveUser(new User(1l, "askerlinihad", "baki", "nihad", "esgerli", roleList));
         userService.findAllUser().forEach(System.out::println);
+
+
+
     }
 }
